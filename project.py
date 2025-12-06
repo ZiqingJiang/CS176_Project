@@ -420,20 +420,15 @@ plt.show()
 # Compute PageRank scores
 pagerank_scores = nx.pagerank(netscience, alpha=0.85)
 
-# Sort and get top 10
 top_pagerank = sorted(pagerank_scores.items(), key=lambda x: x[1], reverse=True)[:10]
 print("Top 10 nodes by PageRank:")
 for node, score in top_pagerank:
     print(f"Node {node}: {score:.5f}")
 
 # Extract top nodes
-top_1_node = top_pagerank[0][0]                  # highest PageRank
+top_1_node = top_pagerank[0][0]                
 top_10_nodes = [node for node, _ in top_pagerank]
 
-# Assign colors:
-# - red for top 1
-# - orange for top 2–10
-# - light blue for all others
 node_colors = []
 for n in netscience.nodes():
     if n == top_1_node:
@@ -443,15 +438,13 @@ for n in netscience.nodes():
     else:
         node_colors.append("skyblue")
 
-# Node sizes scaled by PageRank (same as your code)
+
 node_sizes = [pagerank_scores[n] * 8000 for n in netscience.nodes()]
 
-# Layout
 pos = nx.spring_layout(netscience, seed=42)
 
 plt.figure(figsize=(12, 12))
 
-# Draw nodes with custom colors and sizes
 nx.draw_networkx_nodes(
     netscience,
     pos,
@@ -460,7 +453,6 @@ nx.draw_networkx_nodes(
     alpha=0.85
 )
 
-# Draw edges
 nx.draw_networkx_edges(netscience, pos, alpha=0.25)
 
 plt.title("Top 10 PageRank Nodes Highlighted", fontsize=16)
