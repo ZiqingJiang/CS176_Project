@@ -1,8 +1,8 @@
 # CS176 Intro Network Analysis Project
 
-Team Name: The Node 
+Team Name: The Node
 
-Members: Ziqing Jiang, Arianna Gonzalez 
+Members: Ziqing Jiang, Arianna Gonzalez
 
 ## Project
 
@@ -11,13 +11,15 @@ This project analyzes the CA-NetScience collaboration network using several algo
 GitHub Link: https://github.com/ZiqingJiang/CS176_Project
 
 All files that have:
+
 - Report(pdf)
 - Presentation(pdf)
 - Code(zip)
   - source code(project.py)
-  - figures
-  - data files
+  - figures & data files
 - Readme(md)
+
+Note: Figures and data files are the output after running the code. It provides convenience if the user does not want to execute the script.
 
 ## Dataset
 
@@ -50,6 +52,7 @@ python project.py
 3. Output
 
 The script ensures different visualizations and data files, and will store in the same location. That includes:
+
 - Community detection: Gircan-Newwan, Louvain, LPA
 - Centralities: degree, betweenness, closeness
 - Link Prediciton: Jaccaed Coefficient, Adamic-Adar Index
@@ -76,6 +79,7 @@ The script ensures different visualizations and data files, and will store in th
 5. PageRank
 
 ## Notes
+
 - The network is treated as undirected and unweighted.
 - All algorithms are applied using NetworkX’s built-in implementations.
 - Layouts are generated using Kamada–Kawai or Spring Layout for visual clarity.
