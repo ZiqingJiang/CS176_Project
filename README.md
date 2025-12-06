@@ -8,6 +8,8 @@ Members: Ziqing Jiang, Arianna Gonzalez
 
 This project analyzes the CA-NetScience collaboration network using several algorithms introduced in CS176. The goal is to understand the structural properties of the network, identify important researchers, detect community structure, analyze global influence, and predict potential future collaborations. All analyses were produced using Python and the NetworkX library.
 
+GitHub Link: https://github.com/ZiqingJiang/CS176_Project
+
 All files that have:
 - Report(pdf)
 - Presentation(pdf)
